@@ -10,7 +10,7 @@
 
                 <div [class.border-teal-600]="!plan.featured" [class.border-white]="plan.featured"
                     class="border-b pb-4 mb-6">
-                    <h3 class="font-titles font-bold text-xl">{{ plan.name }}</h3>
+                    <h3 class="font-titles font-bold text-xl text-gray-900">{{ plan.name }}</h3>
                     <p class="text-3xl font-bold mt-2">
                         {{ plan.price }} <br>
                         <span *ngIf="plan.category" class="text-sm font-normal">{{ plan.category }}</span>
