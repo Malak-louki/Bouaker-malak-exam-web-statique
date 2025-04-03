@@ -1,4 +1,35 @@
-<section class="font-generic flex justify-center">
+<section class="font-generic py-12 px-4">
+    <div class="container mx-auto">
+        <h2 class="font-titles font-bold text-2xl md:text-3xl mb-8 ">Pourquoi choisir Worksphere ?</h2>
+
+        <div class="flex flex-wrap justify-center gap-6">
+            <div *ngFor="let card of cards" class="w-full sm:w-[45%] lg:w-[22%] min-w-[250px]">
+                <app-card-component [title]="card.title" [description]="card.description" [imageUrl]="card.imageUrl">
+                </app-card-component>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <section class="font-generic flex justify-center">
     <div class="w-[80vw]">
         <h2 class="font-titles font-bold text-xl md:text-2xl mb-8">Pourquoi choisir Worksphere ?</h2>
         <div class=" flex flex-wrap md:no-wrap justify-between gap-2">
@@ -16,4 +47,4 @@
                 imageUrl="/images/image-4.jpg"></app-card-component>
         </div>
     </div>
-</section>
+</section> -->

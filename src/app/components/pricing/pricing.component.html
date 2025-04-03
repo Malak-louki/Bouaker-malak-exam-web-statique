@@ -1,1 +1,38 @@
-<p>pricing works!</p>
+<section class="py-16 bg-gray-50" id="pricing">
+    <div class="w-[80vw] mx-auto">
+        <div class="text-left mb-12">
+            <h2 class="font-titles font-bold text-2xl md:text-3xl mb-4 text-gray-900">Tarifs</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+            <div *ngFor="let plan of plans" [class.bg-teal-600]="plan.featured" [class.text-white]="plan.featured"
+                [class.bg-white]="!plan.featured" class="flex flex-col p-8 rounded-xl shadow-md h-full">
+
+                <div [class.border-teal-600]="!plan.featured" [class.border-white]="plan.featured"
+                    class="border-b pb-4 mb-6">
+                    <h3 class="font-titles font-bold text-xl">{{ plan.name }}</h3>
+                    <p class="text-3xl font-bold mt-2">
+                        {{ plan.price }} <br>
+                        <span *ngIf="plan.category" class="text-sm font-normal">{{ plan.category }}</span>
+                    </p>
+                </div>
+
+                <ul class="space-y-3 mb-8 flex-grow">
+                    <li *ngFor="let feature of plan.features" class="flex items-start">
+                        <svg [class.text-teal-600]="!plan.featured" [class.text-white]="plan.featured"
+                            class="h-5 w-5 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        {{ feature }}
+                    </li>
+                </ul>
+
+                <button [class.bg-white]="plan.featured" [class.text-teal-600]="plan.featured"
+                    [class.bg-teal-600]="!plan.featured" [class.text-white]="!plan.featured"
+                    class="w-full py-2 px-4 rounded-lg hover:opacity-90 transition-opacity mt-auto">
+                    Choisir cette offre
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

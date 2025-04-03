@@ -1,6 +1,43 @@
-<section class="bg-[url('/images/banniere.jpg')] h-[400px] bg-cover bg-no-repeat">
-    <div class="flex justify-center items-center h-full text-white">
-        <h1 class="uppercase text-xl md:text-4xl e text-center text-6xl font-bold font-titles ">travailler <br>
-            intelligemment, <br> Collaborez partout</h1>
+<section class="relative h-[400px] md:h-[500px] flex items-center justify-center bg-cover bg-no-repeat"
+    [ngStyle]="{'background-image': 'url(/images/banniere.png)'}">
+
+    <!-- Dégradé linéaire inversé (part du bas) -->
+    <div class="absolute inset-0 
+              bg-gradient-to-t from-black/70 via-black/40 to-transparent 
+              h-[100%] bottom-0"></div>
+
+    <!-- Contenu centré -->
+    <div class="relative z-10 text-center px-4">
+        <h1 class="uppercase text-xl md:text-4xl font-bold font-titles text-white">
+            Travailler <br>
+            intelligemment, <br>
+            Collaborez partout
+        </h1>
     </div>
 </section>
+
+
+
+
+
+<!-- <section class="bg-[url('/images/banniere.png')] h-[400px]  md:h-[500px] flex items-center justify-center bg-cover bg-no-repeat">
+    
+    <div class="flex justify-center items-center h-full text-white">
+        <h1 class="uppercase text-xl md:text-4xl e text-center  font-bold font-titles ">travailler <br>
+            intelligemment, <br> Collaborez partout</h1>
+    </div>
+</section> 
+ -->
+
+
+
+
+
+
+
+<!-- <section class="bg-[url('/images/banniere.jpg')] h-[400px] flex items-center justify-center bg-cover bg-no-repeat">
+    <div class="flex justify-center items-center h-full text-white">
+        <h1 class="uppercase text-xl md:text-4xl e text-center  font-bold font-titles ">travailler <br>
+            intelligemment, <br> Collaborez partout</h1>
+    </div>
+</section> -->
