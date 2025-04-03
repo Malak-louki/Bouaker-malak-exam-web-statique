@@ -12,19 +12,6 @@ ng serve
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
 
 ## Building
 
@@ -33,27 +20,37 @@ To build the project run:
 ```bash
 ng build
 ```
+## Structure du projet
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+BouakerMalakExam/
+│── src/
+│   ├── app/
+│   │   ├── components/      # Composants Angular
+│   │   ├── pages/           # Pages principales
+│   │   ├── services/        # Services Angular (si utilisés)
+│   ├── assets/             # Images et ressources statiques
+│   ├── styles.css          # Fichier principal Tailwind CSS
+│── angular.json            # Configuration Angular
+│── package.json            # Dépendances du projet
+│── README.md               # Documentation du projet
 
-## Running unit tests
+## cloner le projet
+# Cloner le projet
+git clone https://github.com/Malak-louki/bouaker-malak-exam.git
+cd bouaker-malak-exam
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+# Installer les dépendances
+npm install
 
-```bash
-ng test
-```
+# Lancer l'application en mode développement
+ng serve
 
-## Running end-to-end tests
+## Technologies utilisées
 
-For end-to-end (e2e) testing, run:
+Angular 17 - Framework JavaScript pour le développement d'applications web
 
-```bash
-ng e2e
-```
+Tailwind CSS 3 - Framework CSS utilitaire pour le stylisme et la mise en page
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+TypeScript - Langage de programmation utilisé avec Angular
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Node.js & npm - Pour la gestion des dépendances et l'exécution du projet
